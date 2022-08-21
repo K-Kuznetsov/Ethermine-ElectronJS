@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Refresh" content="60">
+    <title>Ethermine API</title>
+    <script defer src="Index2.js"></script>
+    <style>
+
+        body {
+            text-align: center;
+        }
+
+        .Konteiner {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 1px;
+        }
+
+        @media screen and (max-width: 1080px) {
+            .Konteiner {
+                grid-template-columns: auto auto;
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            .Konteiner {
+                grid-template-columns: auto;
+            }
+        }
+
+        .Tabel {
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        td {
+            height: 50px;
+        }
+
+        th {
+            background-color: cornflowerblue;
+            height: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="Konteiner">
+    <table class="Tabel">
+        <tr>
+            <th>Miner</th>
+            <th>HiveOS</th>
+            <th>Windows</th>
+        </tr>
+        <tr>
+            <th>Valid shares:</th>
+            <td id="VS1"></td>
+            <td id="VS2"></td>
+        </tr>
+        <tr>
+            <th>Reported hashrate:</th>
+            <td id="RH1"></td>
+            <td id="RH2"></td>
+        </tr>
+        <tr>
+            <th>Current hashrate:</th>
+            <td id="CH1"></td>
+            <td id="CH2"></td>
+        </tr>
+    </table>
+
+    <table class="Tabel">
+        <tr>
+            <th>Average hashrate:</th>
+            <td colspan="2" id="AH">1</td>
+        </tr>
+        <tr>
+            <th>ETH/24h:</th>
+            <td colspan="2" id="ETH24h">1</td>
+        </tr>
+        <tr>
+            <th>USD/24h:</th>
+            <td colspan="2" id="USD24h">1</td>
+        </tr>
+        <tr>
+            <th>Unpaid ETH:</th>
+            <td colspan="2" id="unpaid">1</td>
+        </tr>
+    </table>
+
+    <table class="Tabel">
+        <tr>
+            <th>Total ETH:</th>
+            <td colspan="2" id="sumETH"></td>
+        </tr>
+        <tr>
+            <th>Total TON:</th>
+            <td colspan="2" id="sumTON">165.10082 TON</td>
+        </tr>
+        <tr>
+            <th>Total ERG:</th>
+            <td colspan="2" id="sumERG">26.66360 ERG</td>
+        </tr>
+        <tr>
+            <th>Total RVN:</th>
+            <td colspan="2" id="sumRVN">12469.04203 RVN</td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
